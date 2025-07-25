@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Navbar from './Navbar';
 // import Navbar from './Navbar';
 // import Footer from './Footer';
 
@@ -10,6 +11,7 @@ interface LayoutProps {
 export default function Layout({ children, title = 'Devblog'}: LayoutProps) {
     return (
         <>
+        <Navbar />
         <Head>
             <title>{title}</title>
             <meta name="description" content='Devblog - A blog for developers' />
