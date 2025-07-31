@@ -6,15 +6,19 @@ export default function Navbar() {
     const { darkMode, toggleTheme } = useContext(ThemeContext);
 
     return(
-        <nav className='bg-gray-100 dark:bg-gray-900 px-4 py-3 text-gray-900 dark:text-white flex justify-between items-center'>
-            <div className='space-x-4'>
+        <nav style={{ background: '#222', padding: '1rem', color: '#fff' }}>
+            <Link href="/" style={{marginRight: '1rem', color: '#fff'}}>Home</Link>
+            <Link href="/about" style={{marginRight: '1rem', color: '#fff'}}>About</Link>
+            <Link href="/contact" style={{marginRight: '1rem', color: '#fff'}}>Contact</Link>
+            
+            {/* <div className='space-x-4'>
                 <Link href="/" className='hover:underline'>Home</Link>
                 <Link href="/about" className='hover:underline'>About</Link>
                 <Link href="/contact" className='hover:underline'>Contact</Link>
-            </div>
-            <button onClick={toggleTheme} className='bg-gray-200 dark:bg-gray-200 px-3 py-1 rounded'>
+             </div>*/}
+            <button onClick={toggleTheme} style={{ float: 'right', color: '#fff', background: 'none', border: '1px solid #fff', padding: '0.25rem 1rem'}}>
                 {darkMode ? '✨ Light' : '🌙 Dark'}
-            </button>
+            </button> 
         </nav>
     );
 }
